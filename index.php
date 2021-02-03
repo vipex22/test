@@ -11,6 +11,16 @@
   {
    echo $e->getMessage();
   }
+  $query = "SELECT * FROM test_lab6"; 
+
+$rs = pg_query($con, $query) or die("Cannot execute query: $query\n");
+
+while ($row = pg_fetch_row($rs)) {
+  echo "$row[0] $row[1] $row[2]\n";
+}
+
+pg_close($con); 
+
   
  ?> 
   
