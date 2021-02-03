@@ -15,7 +15,6 @@ while ($row = pg_fetch_row($rs)) {
   echo "$row[0] $row[1] $row[2]\n";
 }
 
-pg_close($myPDO);
   }catch(PDOException $e)
   {
    echo $e->getMessage();
