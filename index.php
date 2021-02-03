@@ -9,24 +9,12 @@
     echo "Connected";
    $query = "SELECT * FROM test_lab6 LIMIT 2";
    $rs = pg_query($myPDO, $query)
-   echo "<table border='1'>
-<tr>
-<th>ProductID</th>
-<th>ProductName</th>
-<th>ProductPrice</th>
-</tr>";
-
-while($row = pg_fetch_array($rs))
-{
-echo "<tr>";
-echo "<td>" . $row['product_id'] . "</td>";
-echo "<td>" . $row['product_name'] . "</td>";
-echo "<td>" . $row['product_price'] . "</td>";
-echo "</tr>";
+while ($row = pg_fetch_row($rs)) {
+  echo "$row[0] $row[1] $row[2]\n";
 }
-echo "</table>";
 
-mysqli_close($con);
+pg_close($con); 
+
   }catch(PDOException $e)
   {
    echo $e->getMessage();
