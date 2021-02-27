@@ -58,7 +58,7 @@
 					<td>".$result['quantityonhand']."</td>
 					<td><a href='update1.php?pi=$result[productid]&pn=$result[productname]&pc=$result[productprice]&qt=$result[quantityonhand]'>
 					Edit/Update</td>
-					<td><a href='delete.php?pi=$result[productid]'>Delete</td>
+					<td><a href='delete1.php?pi=$result[productid]'>Delete</td>
 					
 					</tr>
 					";
