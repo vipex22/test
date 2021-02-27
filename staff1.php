@@ -62,7 +62,7 @@
 				}
 				echo '</tr>';
 				$i = $i + 1;
-				echo '<a href="update.php">Update</a>'
+				echo '<a href="update.php">Update</a>';
 			}
 			pg_free_result($result);
 			echo '</table></body></html>';
