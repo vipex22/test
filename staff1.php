@@ -46,7 +46,7 @@
 				$i = $i + 1;
 			}
 			echo '</tr>';
-			# Display data row by row
+
 			$i = 0;
 			while ($row = pg_fetch_row($result)) 
 			{
@@ -64,6 +64,9 @@
 				$i = $i + 1;
 			}
 			pg_free_result($result);
+	    		
+	    		<input type="submit" value="Add">
+	    			
 
 			echo '</table></body></html>';
 
