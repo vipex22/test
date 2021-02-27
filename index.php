@@ -15,4 +15,6 @@
         <li> <a href="data.php">View database</a> </li>        
     </ul>
     <body>
+      background-image: url('background.jpg');
+      background-size: cover;
     </body>
