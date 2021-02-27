@@ -32,7 +32,7 @@
 		<input class="pass" type="password" placeholder="Enter password">
 		<br>
 		<br>
-		<input type="submit" value="login">
+		<button>Login<button>
 		<br>
 	</div>
 	<?php
