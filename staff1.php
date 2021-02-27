@@ -35,7 +35,7 @@
 			{
 				die('Error: Could not connect: ' . pg_last_error());
 			}
-			$query = 'select * from test_lab6';
+			$query = 'select * from atnshop1';
 			$result = pg_query($pg_heroku, $query);
 			$i = 0;
 			echo '<html><body><table><tr>';
