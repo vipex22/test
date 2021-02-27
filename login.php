@@ -22,24 +22,24 @@
           background-size: 100%100%;
         } 
       </style>
-      <div class="login">
-		<h2>Member login</h2>
-		<br>
-		<p>Account</p>
-		<input class="user" type="text" placeholder="Enter account">
-		<br>
-		<p>Password</p>
-		<input class="pass" type="password" placeholder="Enter password">
-		<br>
-		<br>
-		<button>Login<button>
-		<br>
-	</div>
+      <div>
+	      <h2 style="color:white;">LoginSession</h2>
+		<form style="color:white;" method="POST">
+		Username:<input type="text" name="userid"> <br>
+		Password:&nbsp;<input type="password" name="password"> <br>
+	<input type="submit" value="login">
+    </form>
+    </div>
 	<?php
-	    if ($user == "staff" && $pass == "123")
-		    header("location:staff.php");
-	    if ($user == "boss" && $pass == "456")
-		    header("location:boss.php");
+	    if(isset($_POST['userid']) && isset($_POST['password']))
+    {
+    $user = $_POST['userid'];
+    $pass= $_POST['password'];
+    }
+
+        if($user == "staff" && $pass == "123"){
+           header("location:staff.php");
+        }
 	?>
       
     </body>
