@@ -60,8 +60,10 @@
 					";
 				}
 			}
+	?>	    
       	<br><br>
-      	echo '<p>ATN Shop 2</p>';   
+      	echo '<p>ATN Shop 2</p>';
+	<?php
         $query = 'select * from atnshop2';
 			$data = pg_query($pg_heroku, $query);
 	    		$total = pg_num_rows($data);
