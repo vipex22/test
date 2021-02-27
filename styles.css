@@ -25,5 +25,8 @@ li a {
 li a:hover:not(.active) {
   background-color: #111;
 }
+table, th, td {
+  border: 1px solid black;
+}
 
 </style>
