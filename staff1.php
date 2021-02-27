@@ -51,13 +51,13 @@
 				    	{
 					    echo "
 					    <tr>
-					    <td>'.$result['productid'].'</td>
-					    <td>'.$result['productname'].'</td>
-					    <td>'.$result['productprice'].'</td>
-					    <td>'.$result['quantityonhand'].'</td>
-					    <td><a href = 'update.php?rn=$result[productid]&pn$result[productname]&pp$result[productprice]&qt$result[quantityonhand]'>
+					    <td>".$result['productid']."</td>
+					    <td>".$result['productname']."</td>
+					    <td>".$result['productprice']."</td>
+					    <td>".$result['quantityonhand']."</td>
+					    <td><a href = "update.php?rn=$result[productid]&pn$result[productname]&pp$result[productprice]&qt$result[quantityonhand]">
 					    Edit/Update</td>
-					    <td><a href = 'delete.php?rn=$result[productid]'>
+					    <td><a href = "delete.php?rn=$result[productid]">
 					    Edit/Update</td>
 					    </tr>
 					    ";
@@ -65,6 +65,5 @@
 				}
 			
 		?> 
-	    <input type="submit" value="Add">
 	</body>
 </html>
