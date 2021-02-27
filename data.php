@@ -1,8 +1,28 @@
 <html>
 	<head>
-		<title>PHP Test</title>
-	</head>
-	<body>
+    <link rel="stylesheet" href ="styles.css">
+    <title> Database </title>
+    <marquee bgcolor="gray" 
+             scrollamount="12" 
+             direction="left" 
+             onmouseover="this.stop();" 
+             onmouseout="this.start();">
+        [2/27/2021]: Remember to check the database everyday!
+    </marquee>
+    <ul> 
+        <li> <a href="index.php">Main Page</a></li>
+        <li> <a href="login.php">Login </a></li>
+        <li> <a href="">View database</a> </li>        
+    </ul>
+  </head>
+    <body>
+      <style>
+        body {
+          background-image: url('background.jpg');
+          background-attachment: fixed;
+          background-size: 100%100%;
+        } 
+      </style>
 		<?php 
 			echo '<p>ATN Shop </p>'; 
 			$host_heroku = "ec2-54-156-121-142.compute-1.amazonaws.com";
