@@ -50,15 +50,16 @@
 			$i = 0;
 			while ($row = pg_fetch_row($result)) 
 			{
-				echo '<tr><td><a href="update.php">Update';
+				echo '<tr>';
 				$count = count($row);
 				$y = 0;
 				while ($y < $count)
 				{
 					$c_row = current($row);
-					echo '<td>' . $c_row . '</td>';
+					echo '<td>' . $c_row .'<a href="update.php">Update' '</td>';
 					next($row);
 					$y = $y + 1;
+					
 				}
 				echo '</a></td></tr>';
 				$i = $i + 1;
