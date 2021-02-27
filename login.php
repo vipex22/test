@@ -24,7 +24,7 @@
       </style>
       <div>
 	      <h2 style="color:white;" align="center">LoginSession</h2>
-		<form style="color:white; background-color:gray;" align="center" method="POST">
+		<form style="color:white;" align="center" method="POST">
 		Username:<input type="text" name="userid"> <br>
 		Password:&nbsp;<input type="password" name="password"> <br>
 	<input type="submit" value="login">
