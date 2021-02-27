@@ -16,9 +16,24 @@ $qt=$_GET['qt'];
 ?>
 <html>
   <head>
-    <title>Update</title>
+    <link rel="stylesheet" href ="styles.css">
+    <title> Update </title>
+    <marquee bgcolor="gray" 
+             scrollamount="12" 
+             direction="left" 
+             onmouseover="this.stop();" 
+             onmouseout="this.start();">
+        [2/27/2021]: Remember to check the database everyday!
+    </marquee>
   </head>
   <body>
+	<style>
+        body {
+          background-image: url('background.jpg');
+          background-attachment: fixed;
+          background-size: 100%100%;
+        } 
+      	</style>
     <br>
     <form action="" method="GET">
       <table border"0" bgcolor="white" align="center" cellspacing="20">
