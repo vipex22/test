@@ -59,7 +59,7 @@ $qt=$_GET['qt'];
         </tr>
         
         <tr>
-          <td colspan="2" align="center"><input type="submit" id="button" name="submit" value="Update"></a></td>
+          <td colspan="2" align="center"><input type="submit" id="button" name="submit" value="Update"></td>
         </tr>
     </form>
   </table>
