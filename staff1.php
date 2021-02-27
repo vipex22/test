@@ -64,6 +64,10 @@
 					";
 				}
 			}
+		    	<form action="https://quangatnshop.herokuapp.com/add1.php">
+    				<input type="submit" value="Add" />
+			</form>
+		    
 		?> 
 	</body>
 </html>
