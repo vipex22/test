@@ -11,7 +11,7 @@
     </marquee>
     <ul> 
         <li> <a href="">Main Page</a></li>
-        <li> <a href="">Login </a></li>
+        <li> <a href="login.php">Login </a></li>
         <li> <a href="data.php">View database</a> </li>        
     </ul>
   </head>
