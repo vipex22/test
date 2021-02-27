@@ -18,7 +18,8 @@
       <style>
         body {
           background-image: url('background.jpg');
-          background-size: cover;
+          background-attachment: fixed;
+          background-size: 100%100%;
         } 
       </style>
     </body>
