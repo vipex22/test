@@ -22,13 +22,6 @@
           background-size: 100%100%;
         } 
       </style>
-	    <table border="2">
-		    <tr>
-			    <th>ProductID</th>
-			    <th>ProductName</th>
-			    <th>ProductPrice</th>
-			    <th>QuantityOnHand</th>
-		    </tr>
 		<?php 
 			echo '<p>ATN Shop </p>'; 
 			$host_heroku = "ec2-54-156-121-142.compute-1.amazonaws.com";
