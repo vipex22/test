@@ -78,9 +78,7 @@ if($_GET['submit'])
 	if($data)
 	{
 		echo "<script>alert('Table Updated')</script>";
-		?>
-		<meta http-equiv="refresh" content="0; url=https://quangatnshop.herokuapp.com/staff1.php"
-		<?php
+		header("location:staff1.php");
 	}
 	else
 	{
