@@ -22,14 +22,20 @@
           background-size: 100%100%;
         } 
       </style>
-      <h1 style="color:white">Login To ATN Shop</h1>
-    <div><h2 style="color:white;">LoginSession</h2>
-	<form style="color:white;" method="POST">
-	Username:<input type="text" name="userid"> <br>
-	Password:&nbsp;<input type="password" name="password"> <br>
-	<input type="submit" value="login">
-    </form>
-    </div>
+      <div class="login">
+		<h2>Member login</h2>
+		<br>
+		<p>Email address</p>
+		<input class="user" type="text" placeholder="Enter email">
+		<br>
+		<p>Password</p>
+		<input class="pass" type="password" placeholder="Enter password">
+		<br>
+		<br>
+		<button>Login</button>
+		<br>
+
+	</div>
       
     </body>
 </html>
