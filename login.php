@@ -39,7 +39,10 @@
         	if($user == "staff1" && $pass == "123"){
            	header("location:staff1.php");
         	}
-		if($user == "boss" && $pass == "456"){
+	    	if($user == "staff2" && $pass == "456"){
+           	header("location:staff2.php");
+        	}
+		if($user == "boss" && $pass == "789"){
 		header("location:boss.php");
 		}  
 	?>
