@@ -64,12 +64,8 @@
 				$i = $i + 1;
 			}
 			pg_free_result($result);
-	    		
-	    		<input type="submit" value="Add">
-	    			
-
 			echo '</table></body></html>';
-
 		?> 
+	    <input type="submit" value="login">
 	</body>
 </html>
