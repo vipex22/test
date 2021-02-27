@@ -9,10 +9,6 @@ if (!$pg_heroku)
 			{
 				die('Error: Could not connect: ' . pg_last_error());
 			}
-$pi=$_GET['pi'];
-$pn=$_GET['pn'];
-$pc=$_GET['pc'];
-$qt=$_GET['qt'];
 ?>
 <html>
   <head>
@@ -67,7 +63,11 @@ $qt=$_GET['qt'];
 </html>
 
 <?php
-	$query = "INSERT INTO atnshop1 (productid, productname, productprice, quantityonhand) VALUES ('$pi','$pn','$pc','$qt')";
+$pi=$_GET['productid'];
+$pn=$_GET['productname'];
+$pc=$_GET['productprice'];
+$qt=$_GET['quantityonhand'];
+	$query = "INSERT INTO atnshop1 (productid, productname, productprice, quantityonhand) VALUES ('$pi','$pn','$pp','$qt')";
 	$data = pg_query($pg_heroku,$query);
 	if($data)
 	{
