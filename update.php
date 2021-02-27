@@ -45,17 +45,17 @@ $qt=$_GET['qt'];
         
         <tr>
           <td>Product Name</td>
-          <td><input type="text" value="" name="productname" required></td>
+          <td><input type="text" value="<?php echo "$pn" ?>" name="productname" required></td>
         </tr>
         
         <tr>
           <td>Product Price</td>
-          <td><input type="text" value="" name="productprice" required></td>
+          <td><input type="text" value="<?php echo "$pc" ?>" name="productprice" required></td>
         </tr>
         
         <tr>
           <td>Quantity</td>
-          <td><input type="text" value="" name="quantityonhand" required></td>
+          <td><input type="text" value="<?php echo "$qt" ?>" name="quantityonhand" required></td>
         </tr>
         
         <tr>
@@ -65,3 +65,23 @@ $qt=$_GET['qt'];
   </table>
 </body>
 </html>
+
+<?php
+if($_GET['submit'])
+{
+	$productid = $_GET['productid'];
+	$productname = $_GET['productname'];
+	$productprice = $_GET['productprice'];
+	$quantityonhand = $_GET['quantityonhand'];
+	$query = "UPDATE atnshop1 SET productid='$productid', productname='$productname', productprice='$productprice', quantityonhand='$quantityonhand' WHERE productid='$productid' ";
+	$data = pg_query($pg_heroku,$query);
+	if($data)
+	{
+		echo "<script>alert('Table Updated')</script>";
+	}
+	else
+	{
+		echo "Failed to update the table.";
+	}
+}	
+?>
