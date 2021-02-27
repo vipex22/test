@@ -60,29 +60,6 @@
 					";
 				}
 			}
-	?>	    
-      	<br><br>
-	<?php
-      	echo '<p>ATN Shop 2</p>';
-	
-        $query = 'select * from atnshop2';
-			$data = pg_query($pg_heroku, $query);
-	    		$total = pg_num_rows($data);
-			if($total!=0)
-			{
-				while ($result=pg_fetch_assoc($data))
-				{
-					echo "
-					<tr>
-					<td>".$result['productid']."</td>
-					<td>".$result['productname']."</td>
-					<td>".$result['productprice']."</td>
-					<td>".$result['quantityonhand']."</td>
-					
-					</tr>
-					";
-				}
-			}
 	    
 		?> 
 		 
