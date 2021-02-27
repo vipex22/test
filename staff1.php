@@ -50,7 +50,7 @@
 			$i = 0;
 			while ($row = pg_fetch_row($result)) 
 			{
-				echo '<tr>';
+				echo '<tr><td><a href="update.php">Update';
 				$count = count($row);
 				$y = 0;
 				while ($y < $count)
@@ -60,7 +60,7 @@
 					next($row);
 					$y = $y + 1;
 				}
-				echo '</tr>';
+				echo '</a></td></tr>';
 				$i = $i + 1;
 			}
 			pg_free_result($result);
