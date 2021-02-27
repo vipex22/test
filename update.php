@@ -78,7 +78,9 @@ if($_GET['submit'])
 	if($data)
 	{
 		echo "<script>alert('Table Updated')</script>";
+		?>
 		header("location:staff1.php");
+		<?php
 	}
 	else
 	{
