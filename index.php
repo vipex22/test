@@ -3,19 +3,42 @@
   <title>PHP Test</title>
  </head>
  <body>
- <?php echo '<p>Hello Quang!</p>'; 
+ <?php echo '<p>ATN Shop!</p>'; 
   try{
-   $myPDO = new PDO("pgsql:host=ec2-54-156-121-142.compute-1.amazonaws.com;dbname=dqd7oa5e19ldm","bidifaumdbqryy","d7f81c395bc38e5c760c2f7163149463308f70cb36fd9423c9b2f41d6704a535");
-    echo "Connected";
+   $myPDO = new PDO("pgsql:host=ec2-54-156-121-142.compute-1.amazonaws.com;
+   dbname=dqd7oa5e19ldm","bidifaumdbqryy","d7f81c395bc38e5c760c2f7163149463308f70cb36fd9423c9b2f41d6704a535");
+   echo "Connected";
+   $query = 'SELECT * from test_lab6'; 
+   $rs = pg_query($myPDO, $query) or die("Cannot execute query: $query\n");
    
-   
-     $query = "SELECT * FROM test_lab6"; 
-
-$rs = pg_query($myPDO, $query) or die("Cannot execute query: $query\n");
-
-while ($row = pg_fetch_row($rs)) {
-  echo "$row[0] $row[1] $row[2]\n";
-}
+   $i = 0;
+			echo '<html><body><table><tr>';
+			while ($i < pg_num_fields($result))
+			{
+				$fieldName = pg_field_name($result, $i);
+				echo '<td>' . $fieldName . '</td>';
+				$i = $i + 1;
+			}
+			echo '</tr>';
+			# Display data row by row
+			$i = 0;
+			while ($row = pg_fetch_row($result)) 
+			{
+				echo '<tr>';
+				$count = count($row);
+				$y = 0;
+				while ($y < $count)
+				{
+					$c_row = current($row);
+					echo '<td>' . $c_row . '</td>';
+					next($row);
+					$y = $y + 1;
+				}
+				echo '</tr>';
+				$i = $i + 1;
+			}
+			pg_free_result($result);
+   echo '</table></body></html>';
 
   }catch(PDOException $e)
   {
