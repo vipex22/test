@@ -11,7 +11,7 @@ if (!$pg_heroku)
 			}
 $pi=$_GET['pi'];
 $pn=$_GET['pn'];
-$pc=$_GET['pc'];
+$pp=$_GET['pp'];
 $qt=$_GET['qt'];
 ?>
 <html>
@@ -50,7 +50,7 @@ $qt=$_GET['qt'];
         
         <tr>
           <td>Product Price</td>
-          <td><input type="text" value="<?php echo "$pc" ?>" name="productprice" required></td>
+          <td><input type="text" value="<?php echo "$pp" ?>" name="productprice" required></td>
         </tr>
         
         <tr>
