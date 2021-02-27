@@ -40,7 +40,7 @@ $qt=$_GET['qt'];
         
         <tr>
           <td>Product ID</td>
-          <td><input type="text" value="" name="productid" required></td>
+          <td><input type="text" value="<?php echo "$pi" ?>" name="productid" required></td>
         </tr>
         
         <tr>
