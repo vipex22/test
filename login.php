@@ -1,6 +1,6 @@
   <head>
     <link rel="stylesheet" href ="styles.css">
-    <title> ATN Shop </title>
+    <title> Login </title>
     <marquee bgcolor="gray" 
              scrollamount="12" 
              direction="left" 
@@ -22,5 +22,14 @@
           background-size: 100%100%;
         } 
       </style>
+      <h1 style="color:white">Login To ATN Shop</h1>
+    <div><h2 style="color:white;">LoginSession</h2>
+	<form style="color:white;" method="POST">
+	Username:<input type="text" name="userid"> <br>
+	Password:&nbsp;<input type="password" name="password"> <br>
+	<input type="submit" value="login">
+    </form>
+    </div>
+      
     </body>
 </html>
