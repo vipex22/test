@@ -59,6 +59,8 @@
 					    Edit/Update</td>
 					    <td><a href = 'delete.php?rn=$result[productid]'>
 					    Edit/Update</td>
+					    </tr>
+					    ";
 					}
 				}
 			
