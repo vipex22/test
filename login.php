@@ -25,8 +25,8 @@
       <div class="login">
 		<h2>Member login</h2>
 		<br>
-		<p>Email address</p>
-		<input class="user" type="text" placeholder="Enter email">
+		<p>Account</p>
+		<input class="user" type="text" placeholder="Enter account">
 		<br>
 		<p>Password</p>
 		<input class="pass" type="password" placeholder="Enter password">
