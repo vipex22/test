@@ -9,10 +9,9 @@
              onmouseout="this.start();">
         [2/27/2021]: Remember to check the database everyday!
     </marquee>
-    <ul> 
-        <li> <a href="index.php">Main Page</a></li>
-        <li> <a href="login.php">Login </a></li>
-        <li> <a href="">View database</a> </li>        
+    <ul>
+        <li> <a href="">View database</a> </li>
+	    <li> <a href="login.php"> Log out</a> </li>
     </ul>
   </head>
     <body>
