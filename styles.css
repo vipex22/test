@@ -29,5 +29,7 @@ table, th, td {
   border: 1px solid black;
   background-color: #ffffff;
 }
-
+p {
+  background-color: #ffffff;
+}
 </style>
