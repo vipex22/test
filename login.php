@@ -32,20 +32,19 @@
     </div>
 	<?php
 	    if(isset($_POST['userid']) && isset($_POST['password']))
-    {
-    $user = $_POST['userid'];
-    $pass= $_POST['password'];
-    }
-
-        if($user == "staff" && $pass == "123"){
-           header("location:staff.php");
-        }
-	if($user == "boss" && $pass == "456"){
+    		{
+    		$user = $_POST['userid'];
+    		$pass= $_POST['password'];
+    		}
+        	if($user == "staff" && $pass == "123"){
+           	header("location:staff.php");
+        	}
+		if($user == "boss" && $pass == "456"){
 		header("location:boss.php");
-	}
-	    else
-	    echo '<br><i style="color:white;">Wrong account or password!</i>';
-		    
+		}
+		else{
+	    	echo '<br><i style="color:white;">Wrong account or password!</i>';
+		}    
 	?>
       
     </body>
