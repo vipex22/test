@@ -30,7 +30,7 @@
 			    <th>Quantity</th>
 		    </tr>
 		<?php 
-			echo '<p>ATN Shop </p>'; 
+			echo '<p>ATN Shop 1</p>'; 
 			$host_heroku = "ec2-54-156-121-142.compute-1.amazonaws.com";
 			$db_heroku = "dqd7oa5e19ldm";
 			$user_heroku = "bidifaumdbqryy";
@@ -60,8 +60,8 @@
 					";
 				}
 			}
-      
-        
+      	<br><br>
+      	echo '<p>ATN Shop 2</p>';   
         $query = 'select * from atnshop2';
 			$data = pg_query($pg_heroku, $query);
 	    		$total = pg_num_rows($data);
