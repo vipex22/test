@@ -46,9 +46,9 @@
 		    $data = pg_query($pg_heroku, $query);
 		    $total = pg_num_rows($data)
 			    if ($total!=0)
-			    {
+			    	{
 				    While($result=pg_fetch_assoc($data))
-				    {
+				    	{
 					    echo "
 					    <tr>
 					    <td>'.$result['productid'].'</td>
@@ -59,6 +59,8 @@
 					    Edit/Update</td>
 					    <td><a href = 'delete.php?rn=$result[productid]'>
 					    Edit/Update</td>
+					}
+				}
 			
 		?> 
 	    <input type="submit" value="Add">
