@@ -65,9 +65,9 @@ if (!$pg_heroku)
 <?php
 $pi=$_GET['productid'];
 $pn=$_GET['productname'];
-$pc=$_GET['productprice'];
+$pp=$_GET['productprice'];
 $qt=$_GET['quantityonhand'];
-	$query = "INSERT INTO atnshop1 (productid, productname, productprice, quantityonhand) VALUES ('$pi','$pn','$pp','$qt')";
+	$query = "INSERT INTO atnshop1 VALUES ('$pi','$pn','$pp','$qt')";
 	$data = pg_query($pg_heroku,$query);
 	if($data)
 	{
@@ -79,6 +79,5 @@ $qt=$_GET['quantityonhand'];
 	else
 	{
 		echo "Failed to update the table.";
-	}
-}	
+	}	
 ?>
