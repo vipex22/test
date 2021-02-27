@@ -13,7 +13,7 @@ if (!$pg_heroku)
 <html>
   <head>
     <link rel="stylesheet" href ="styles.css">
-    <title> Update </title>
+    <title> Add </title>
     <marquee bgcolor="gray" 
              scrollamount="12" 
              direction="left" 
