@@ -59,7 +59,6 @@
 					echo '<td>' . $c_row .'</td>';
 					next($row);
 					$y = $y + 1;
-					echo '<a href="update.php">Update</a>'
 				}
 				echo '</tr>';
 				$i = $i + 1;
