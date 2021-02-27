@@ -56,11 +56,10 @@
 					<td>".$result['productname']."</td>
 					<td>".$result['productprice']."</td>
 					<td>".$result['quantityonhand']."</td>
-					<td><a href='update.php?pi=$result[productid]'>
+					</tr>
+					";
 				}
-			echo '</tr>';
-
-			echo '</table></body></html>';
+			}
 		?> 
 	</body>
 </html>
