@@ -56,12 +56,12 @@
 				while ($y < $count)
 				{
 					$c_row = current($row);
-					echo '<td>' . $c_row .'<a href="update.php">Update' '</td>';
+					echo '<td>' . $c_row .'</td>';
 					next($row);
 					$y = $y + 1;
-					
+					echo '<a href="update.php">Update</a>'
 				}
-				echo '</a></td></tr>';
+				echo '</tr>';
 				$i = $i + 1;
 			}
 			pg_free_result($result);
