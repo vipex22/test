@@ -22,6 +22,13 @@
           background-size: 100%100%;
         } 
       </style>
+	    <table border="2">
+		    <tr>
+			    <th>ProductID</th>
+			    <th>ProductName</th>
+			    <th>ProductPrice</th>
+			    <th>QuantityOnHand</th>
+		    </tr>
 		<?php 
 			echo '<p>ATN Shop </p>'; 
 			$host_heroku = "ec2-54-156-121-142.compute-1.amazonaws.com";
@@ -35,37 +42,25 @@
 			{
 				die('Error: Could not connect: ' . pg_last_error());
 			}
-			$query = 'select * from atnshop1';
-			$result = pg_query($pg_heroku, $query);
-			$i = 0;
-			echo '<html><body><table><tr>';
-			while ($i < pg_num_fields($result))
-			{
-				$fieldName = pg_field_name($result, $i);
-				echo '<td>' . $fieldName . '</td>';
-				$i = $i + 1;
-			}
-			echo '</tr>';
-
-			$i = 0;
-			while ($row = pg_fetch_row($result)) 
-			{
-				echo '<tr>';
-				$count = count($row);
-				$y = 0;
-				while ($y < $count)
-				{
-					$c_row = current($row);
-					echo '<td>' . $c_row . '</td>';
-					next($row);
-					$y = $y + 1;
-				}
-				echo '</tr>';
-				$i = $i + 1;
-			}
-			pg_free_result($result);
-			echo '</table></body></html>';
+		    $query = 'SELECT * FROM atnshop1';
+		    $data = pg_query($pg_heroku, $query);
+		    $total = pg_num_rows($data)
+			    if ($total!=0)
+			    {
+				    While($result=pg_fetch_assoc($data))
+				    {
+					    echo "
+					    <tr>
+					    <td>'.$result['productid'].'</td>
+					    <td>'.$result['productname'].'</td>
+					    <td>'.$result['productprice'].'</td>
+					    <td>'.$result['quantityonhand'].'</td>
+					    <td><a href = 'update.php?rn=$result[productid]&pn$result[productname]&pp$result[productprice]&qt$result[quantityonhand]'>
+					    Edit/Update</td>
+					    <td><a href = 'delete.php?rn=$result[productid]'>
+					    Edit/Update</td>
+			
 		?> 
-	    <input type="submit" value="login">
+	    <input type="submit" value="Add">
 	</body>
 </html>
