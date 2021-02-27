@@ -36,8 +36,8 @@
     		$user = $_POST['userid'];
     		$pass= $_POST['password'];
     		}
-        	if($user == "staff" && $pass == "123"){
-           	header("location:staff.php");
+        	if($user == "staff1" && $pass == "123"){
+           	header("location:staff1.php");
         	}
 		if($user == "boss" && $pass == "456"){
 		header("location:boss.php");
