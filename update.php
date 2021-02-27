@@ -77,8 +77,10 @@ if($_GET['submit'])
 	$data = pg_query($pg_heroku,$query);
 	if($data)
 	{
-		header("location:staff1.php");
-		echo "Updated Successfully!";
+		echo "<script>alert('Updated Successfully!'</script>)";
+		?>
+		<meta http-equiv="refresh" content="0; url=https://quangatnshop.herokuapp.com/staff1.php" />
+		<?php
 	}
 	else
 	{
