@@ -14,6 +14,7 @@
         <li> <a href="">Login </a></li>
         <li> <a href="data.php">View database</a> </li>        
     </ul>
+  </head>
     <body>
       <style>
         body {
@@ -23,3 +24,4 @@
         } 
       </style>
     </body>
+</html>
