@@ -1,4 +1,5 @@
-  <head>
+<html>
+<head>
     <link rel="stylesheet" href ="styles.css">
     <title> Login </title>
     <marquee bgcolor="gray" 
@@ -10,8 +11,7 @@
     </marquee>
     <ul> 
         <li> <a href="index.php">Main Page</a></li>
-        <li> <a href="">Login </a></li>
-        <li> <a href="data.php">View database</a> </li>        
+        <li> <a href="">Login </a></li>       
     </ul>
   </head>
     <body>
@@ -34,8 +34,13 @@
 		<br>
 		<button>Login</button>
 		<br>
-
 	</div>
+	<?php
+	    if ($user == "staff" && $pass == "123")
+		    header("location:staff.php");
+	    if ($user == "boss" && $pass == "456")
+		    header("location:boss.php");
+	?>
       
     </body>
 </html>
