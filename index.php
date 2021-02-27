@@ -1,17 +1,24 @@
 <html>
- <head>
-  <title>PHP Test</title>
- </head>
- <body>
- <?php echo '<p>ATN Shop!</p>'; 
-  try{
-   $myPDO = new PDO("pgsql:host=ec2-54-156-121-142.compute-1.amazonaws.com;
-   dbname=dqd7oa5e19ldm","bidifaumdbqryy","d7f81c395bc38e5c760c2f7163149463308f70cb36fd9423c9b2f41d6704a535");
-   echo "Connected";
-   $query = 'SELECT * from test_lab6'; 
-   $rs = pg_query($myPDO, $query) or die("Cannot execute query: $query\n");
-   
-   $i = 0;
+	<head>
+		<title>PHP Test</title>
+	</head>
+	<body>
+		<?php 
+			echo '<p>ATN Shop </p>'; 
+			$host_heroku = "ec2-54-156-121-142.compute-1.amazonaws.com";
+			$db_heroku = "dqd7oa5e19ldm";
+			$user_heroku = "bidifaumdbqryy";
+			$pw_heroku = "d7f81c395bc38e5c760c2f7163149463308f70cb36fd9423c9b2f41d6704a535";
+			$conn_string = "host=$host_heroku port=5432 dbname=$db_heroku user=$user_heroku password=$pw_heroku";
+			$pg_heroku = pg_connect($conn_string);
+			
+			if (!$pg_heroku)
+			{
+				die('Error: Could not connect: ' . pg_last_error());
+			}
+			$query = 'select * from test_lab6';
+			$result = pg_query($pg_heroku, $query);
+			$i = 0;
 			echo '<html><body><table><tr>';
 			while ($i < pg_num_fields($result))
 			{
@@ -38,18 +45,9 @@
 				$i = $i + 1;
 			}
 			pg_free_result($result);
-   echo '</table></body></html>';
 
-  }catch(PDOException $e)
-  {
-   echo $e->getMessage();
-  }
- 
+			echo '</table></body></html>';
 
-
-
-  
- ?> 
-  
- </body>
+		?> 
+	</body>
 </html>
