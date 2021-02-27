@@ -41,10 +41,7 @@
         	}
 		if($user == "boss" && $pass == "456"){
 		header("location:boss.php");
-		}
-		else{
-	    	echo '<br><i style="color:white;">Wrong account or password!</i>';
-		}    
+		}  
 	?>
       
     </body>
