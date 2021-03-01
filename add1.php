@@ -80,7 +80,7 @@ if($_GET['submit'])
 	}
 	else
 	{
-		echo "Failed to update the table.";
+		echo "Failed to add product to the table.";
 	}
 }
 ?>
